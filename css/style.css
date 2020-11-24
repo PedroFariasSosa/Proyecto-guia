@@ -1,0 +1,68 @@
+/* costom property */
+:root {
+  --Dark-primary: #151E21;
+  --Text-primary: #ffffff;
+  --Title: #7DDFEE;
+}
+body {
+  background-color: var(--Dark-primary);
+  color: var(--Text-primary);
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+img {
+  width: 100%;
+}
+.contenedor {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+}
+.contenedor__enlace {
+  text-decoration: none;
+  color: var(--Text-primary);
+  margin-right: 20px;
+}
+.contenedor__enlace:last-child {
+  margin: 0;
+}
+.contenedor__logo-img {
+  width: 100px;
+  transition: all .5s ease-in-out ;
+}
+.contenedor__logo-img:hover {
+  width: 110px;
+}
+.fab {
+  font-size: 20px;
+  transition: all .5s ease-in-out;
+}
+.fab:hover {
+  font-size: 30px;
+}
+/* contenedor seccion */
+.contenedor-seccion {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .contenedor-seccion {
+    flex-direction: row;
+  }
+  .contenedor-texto {
+    width: 600px;
+    margin: 30px;
+  }
+}
+.doc__titulo {
+  text-align: center;
+}
+.doc__parrafo {
+  display: flex;
+  justify-content: center;
+}
