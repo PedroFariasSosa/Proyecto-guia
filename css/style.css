@@ -1,20 +1,35 @@
+/* import de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 /* costom property */
 :root {
   --Dark-primary: #151E21;
+  --Light-primary: #f0f0f0;
   --Text-primary: #ffffff;
+  --Text-secondary: #000000;
   --Title: #7DDFEE;
+  --Lato: 'Lato', sans-serif;
 }
+/* Generales */
 body {
   background-color: var(--Dark-primary);
   color: var(--Text-primary);
+  transition: background .2s linear;
+}
+body.light {
+  background-color: var(--Light-primary);
+  color: var(--Text-secondary);
 }
 h1, h2, h3, h4, h5 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
+p {
+  font-family: var(--Lato);
+}
 img {
   width: 100%;
 }
+/* Navbar */
 .contenedor {
   height: 60px;
   display: flex;
@@ -22,10 +37,17 @@ img {
   align-items: center;
   margin: 0 20px;
 }
+.contenedor__nav {
+  display: flex;
+  align-items: center;
+}
 .contenedor__enlace {
   text-decoration: none;
   color: var(--Text-primary);
   margin-right: 20px;
+}
+.contenedor__enlace .light {
+  color: var(--Text-secondary);
 }
 .contenedor__enlace:last-child {
   margin: 0;
@@ -44,11 +66,49 @@ img {
 .fab:hover {
   font-size: 30px;
 }
+.checkbox {
+  display: none;
+}
+.label {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 50px;
+  height: 26px;
+  width: 50px;
+}
+.ball {
+  background-color: #000;
+  position: absolute;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transition: transform .2s linear;
+}
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+.fa-moon {
+  color: #f1c40f;
+}
+.fa-sun {
+  color: #f39c12;
+}
 /* contenedor seccion */
 .contenedor-seccion {
   margin: 0 20px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+}
+.contenedor-img-proyecto {
+  width: 350px;
+  height: 350px;
 }
 @media (min-width: 768px) {
   .contenedor-seccion {
@@ -59,10 +119,16 @@ img {
     margin: 30px;
   }
 }
-.doc__titulo {
-  text-align: center;
-}
-.doc__parrafo {
+.contenedor-guias {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  background-color: #000000;
+  height: 50px;
+  border-radius: 10px;
+}
+.boton-link {
+  color: var(--Text-primary);
+  text-decoration: none;
 }

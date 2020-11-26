@@ -16,3 +16,11 @@ const typed = new Typed('.typed', {
   showCursor: '|',
   contentType: 'html'
 })
+
+const checkbox = document.getElementById('checkbox')
+
+checkbox.addEventListener('change', () => {
+  // Cambio de tema del sitio web
+  document.body.classList.toggle('light')
+  document.contenedor__enlace.toggle('light')
+})
