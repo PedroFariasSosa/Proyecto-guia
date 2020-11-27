@@ -17,10 +17,21 @@ const typed = new Typed('.typed', {
   contentType: 'html'
 })
 
-const checkbox = document.getElementById('checkbox')
+//const colorSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
-checkbox.addEventListener('change', () => {
-  // Cambio de tema del sitio web
+//colorSwitch.addEventListener('change', switchColor, false)
+
+// function switchColor (e) {
+//   if (e.target.checked) {
+//     document.documentElement.setAttribute('data-theme', 'light')
+//   } else {
+//     document.documentElement.setAttribute('data-theme', 'dark')
+//   }
+// }
+
+const botonSwitch = document.querySelector('#switch')
+
+botonSwitch.addEventListener('click', () => {
   document.body.classList.toggle('light')
-  document.contenedor__enlace.toggle('light')
+  botonSwitch.classList.toggle('active')
 })
