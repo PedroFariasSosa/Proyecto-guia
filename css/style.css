@@ -12,10 +12,6 @@
   --Moon-color: #f1c40f;
   --Sun-color: #f39c12;
 }
-[data-theme = "light"] {
-  --Bg-primary: #f0f0f0;
-  --Text-primary: #000000;
-}
 /* Generales */
 *{
   padding: 0;
@@ -26,6 +22,8 @@ body {
   background-color: var(--Bg-primary);
   color: var(--Text-primary);
   transition: background .2s linear;
+  width: 90%;
+  margin: 0 auto;
 }
 body.light {
   background-color: var(--Light-bg);
@@ -34,6 +32,7 @@ body.light {
 h1, h2, h3, h4, h5 {
   font-family: var(--Monserrat);
   font-weight: 700;
+  margin-bottom: 20px;
 }
 p {
   font-family: var(--Lato);
@@ -47,7 +46,11 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 20px;
+}
+@media (min-width: 768px) {
+  .contenedor {
+    height: 80px;
+  }
 }
 .contenedor__nav {
   display: flex;
@@ -78,10 +81,18 @@ img {
 .fab:hover {
   font-size: 30px;
 }
+@media (min-width: 768px) {
+  .fab {
+    font-size: 30px;
+  }
+  .fab:hover {
+    font-size: 40px;
+  }
+}
 /* Swith dark mode */
 .switch {
   background-color: #343d5b;
-  border-radius: 1000px;
+  border-radius: 100px;
   border: none;
   position: relative;
   cursor: pointer;
@@ -91,8 +102,8 @@ img {
 .switch::after {
   content: "";
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   position: absolute;
   background-color: #f1f1f1;
   top: 0;
@@ -101,6 +112,12 @@ img {
   border-radius: 100px;
   transition: .3s ease all;
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+@media (min-width: 768px) {
+  .switch::after {
+    width: 30px;
+    height: 30px;
+  }
 }
 .switch.active {
   background-color: orange;
@@ -111,12 +128,19 @@ img {
   left: unset;
 }
 .span {
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
   display: block;
   background-color: none;
   color: #fff
+}
+@media (min-width: 768px) {
+  .span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
 }
 /* contenedor seccion */
 .contenedor-seccion {
@@ -143,7 +167,7 @@ img {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 30px;
+  margin: 30px 0px;
   background-color: var(--Dark-secondary);
   height: 50px;
   border-radius: 10px;

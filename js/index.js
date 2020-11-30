@@ -17,21 +17,14 @@ const typed = new Typed('.typed', {
   contentType: 'html'
 })
 
-//const colorSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-
-//colorSwitch.addEventListener('change', switchColor, false)
-
-// function switchColor (e) {
-//   if (e.target.checked) {
-//     document.documentElement.setAttribute('data-theme', 'light')
-//   } else {
-//     document.documentElement.setAttribute('data-theme', 'dark')
-//   }
-// }
-
+// Variables
 const botonSwitch = document.querySelector('#switch')
 
-botonSwitch.addEventListener('click', () => {
-  document.body.classList.toggle('light')
-  botonSwitch.classList.toggle('active')
-})
+// Add Evenlisteners
+botonSwitch.addEventListener('click', switchTogle)
+
+// Functions
+function switchTogle() {
+  document.body.classList.toggle("light");
+  botonSwitch.classList.toggle("active");
+}
